@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+*::placeholder {
+  color: #181b25;
+  font-weight: bold;
+}
+*::selection {
+  background: #181b25;
+  color: #fff;
+}
+nav {
+  padding: 10px;
+  background: #181b25;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+nav a:not(:hover) {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+form {
+  background: #ccc;
+  width: 40%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+form h4 {
+  color: #181b25;
+  font-weight: normal;
+  font-size: 22px;
+  text-align: center;
+}
+form input {
+  width: 99%;
+  padding: 5px;
+  margin-bottom: 5px;
+  outline: none;
+  color: #181b25;
+}
+form textarea {
+  max-width: 99%;
+  width: 99%;
+  padding: 5px;
+  height: 80px;
+  outline: none;
+}
+form button {
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 98%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #181b25;
+  color: #fff;
+}
+form button i {
+  font-size: 1px;
+}
+form button:hover i {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+form button:not(:hover) i {
+  font-size: 1px;
+  transition: all 0.3s ease;
+}
+#contacts-list {
+  position: absolute;
+  top: 90px;
+  left: 590px;
+  width: 500px;
+  height: 150px;
+  background: #ccc;
+}
+#contacts-list h4 {
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+#contacts-list i {
+  color: #181b25;
+  margin-left: 5px;
+}
