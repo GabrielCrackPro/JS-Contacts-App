@@ -15,7 +15,7 @@ addContact.addEventListener('submit', (e) => {
     }
     const savedContacts = []
     if (contactName == '' || contactPhone == '' || contactDescription == '' || contactPhone.length < 6) {
-        console.error('Please type something')
+        console.error('Please try again')
     } else {
         fetch(API_URL, {
             method: "POST",
@@ -30,7 +30,21 @@ addContact.addEventListener('submit', (e) => {
         <i class="fas fa-comment-alt"></i><p id="contact-description-card">${newContact.contactDescription}</p>
         `
         savedContacts.push(newContact)
-        console.log(savedContacts)
+        localStorage.setItem('Contacts', JSON.stringify(savedContacts))
+        const localContacts = localStorage.getItem('Contacts')
+        console.log(savedContacts[0])
+    }
+    function getSavedContacts() {
+        for (var i = 0; i < savedContacts.length; i++) {
+            contactsList.innerHTML = `
+            <h4>${savedContacts[i].contactName}</h4>
+            <i class="fas fa-mobile"></i><p>${savedContacts[i].contactPhone}</p>
+            <i class="fas fa-comment-alt"></i><p>${savedContacts[i].contactDescription}</p>
+            `
+        }
+    }
+    if (location.reload()) {
+        getSavedContacts()
     }
     addContact.reset()
     e.preventDefault()

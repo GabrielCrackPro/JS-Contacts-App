@@ -85,7 +85,7 @@ form button:not(:hover) i {
   top: 90px;
   left: 590px;
   width: 500px;
-  height: 150px;
+  /*height: 150px;*/
   background: #ccc;
 }
 #contacts-list h4 {
