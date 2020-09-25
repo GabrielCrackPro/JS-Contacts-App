@@ -34,18 +34,6 @@ addContact.addEventListener('submit', (e) => {
         const localContacts = localStorage.getItem('Contacts')
         console.log(savedContacts[0])
     }
-    function getSavedContacts() {
-        for (var i = 0; i < savedContacts.length; i++) {
-            contactsList.innerHTML = `
-            <h4>${savedContacts[i].contactName}</h4>
-            <i class="fas fa-mobile"></i><p>${savedContacts[i].contactPhone}</p>
-            <i class="fas fa-comment-alt"></i><p>${savedContacts[i].contactDescription}</p>
-            `
-        }
-    }
-    if (location.reload()) {
-        getSavedContacts()
-    }
     addContact.reset()
     e.preventDefault()
 })
